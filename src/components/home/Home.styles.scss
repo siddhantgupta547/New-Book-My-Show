@@ -8,6 +8,7 @@ $secondary-color: #3fb284;
 
 .home-container {
   margin-top: 62.3px;
+  min-width: 550px;
 
   .filters-section {
     @include flex();

@@ -19,7 +19,6 @@ nav{
     .nav-left {
       @include flex();
       justify-content: flex-start;
-      width: 60%;
       align-items: center;
   
       .nav-left-heading {
@@ -42,12 +41,11 @@ nav{
     .nav-right{
       @include flex();
       justify-content: space-evenly;
-      width: 30%;
       align-items: center;
     }
   }
 
-  @media screen and (max-width:500px){
+  @media screen and (max-width:600px){
     .nav-button{
       display: none;
     }

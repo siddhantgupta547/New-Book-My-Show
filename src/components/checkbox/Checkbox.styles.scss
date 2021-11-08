@@ -1,9 +1,10 @@
 .dropdown {
   position: relative;
-  width: 8vw;
+  width: 7em;
   border: none;
   color: white;
   cursor: pointer;
+  margin-right: 1em;
 }
 .dropdown > button {
   width: 100%;
@@ -13,6 +14,8 @@
   border-radius: 4px;
   color: inherit;
   cursor: pointer;
+
+  
 }
 
 .dropdown-list {

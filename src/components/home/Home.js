@@ -5,6 +5,9 @@ import Row from '../rows/Row';
 
 //Function to calculate number of columns depending upon screen width, has default value as initially no value is provided.
 const noOfCols = (width = window.innerWidth) => {
+  if (width < 500) {
+    return 2;
+  }
   return Math.floor(width / 250); //Dividing by 250 to get right amount of rows depending upon the width
 };
 
@@ -28,7 +31,7 @@ const Home = ({ movies, filters }) => {
       if (newCols !== cols) {
         setCols(newCols);
       }
-    }, 50); // set timeout is used because when maximize is clicked window width of when the click happens is used instead of the new full width.
+    }, 100); // set timeout is used because when maximize is clicked window width of when the click happens is used instead of the new full width.
   };
 
   //Create row is used to get the no of rows depening on column and data size.
@@ -51,7 +54,6 @@ const Home = ({ movies, filters }) => {
     for (let i = 0; i < rows; i++) {
       slicedArray.push(data.slice(i * cols, i * cols + cols));
     }
-    console.log(slicedArray, 'Slice');
     return slicedArray;
   };
 
