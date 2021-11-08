@@ -1,0 +1,33 @@
+$main-color: #000000;
+$secondary-color: #3fb284;
+
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-container {
+  margin-top: 62.3px;
+
+  .filters-section {
+    @include flex();
+    justify-content: flex-start;
+    background-color: inherit;
+    color: white;
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+
+    .Appliedfilter {
+      border: 1px solid $secondary-color;
+      border-radius: 8px;
+      margin-right: 0.2em;
+      padding: 0 0.8em;
+    }
+  }
+
+  .home-container {
+    @include flex();
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}

@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Scroll bar styling for chrome and safari*/
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* To change the track color */
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #000000;
+}
+
+/* To change the thumb color  */
+body::-webkit-scrollbar-thumb {
+  background-color: #3fb284;
+  outline: 1px solid #000000;
+  border-radius: 5px;
+}

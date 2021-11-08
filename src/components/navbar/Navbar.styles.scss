@@ -1,0 +1,54 @@
+$main-color: #000000;
+$secondary-color: #3fb284;
+
+@mixin flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav{
+    @include flex();
+    justify-content: space-between;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top:0;
+    background-color: $main-color;
+    z-index: 1;
+
+    .nav-left {
+      @include flex();
+      justify-content: flex-start;
+      width: 60%;
+      align-items: center;
+  
+      .nav-left-heading {
+        margin: 0 1.5em 0 1em;
+      }
+
+      .nav-button{
+        margin-right: 1em;
+        outline: none;
+        background-color:#1a1a1a;
+        color: inherit;
+        border: 2px solid $secondary-color;
+        border-radius: 5px;
+        padding: .5em 1em;
+      }
+      .active{
+        background-color: $secondary-color;
+      }
+    }
+    .nav-right{
+      @include flex();
+      justify-content: space-evenly;
+      width: 30%;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width:500px){
+    .nav-button{
+      display: none;
+    }
+  }

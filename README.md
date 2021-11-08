@@ -1,2 +1,2 @@
-# New-Book-My-Show
+# CodeSandbox-BookMyShow
 Created with CodeSandbox

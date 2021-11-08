@@ -1,0 +1,36 @@
+.dropdown {
+  position: relative;
+  width: 8vw;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.dropdown > button {
+  width: 100%;
+  background-color: #1a1a1a;
+  outline: none;
+  border: 2px solid #3fb284;
+  border-radius: 4px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 10px;
+  text-align: left;
+  display: none;
+  z-index: 3;
+  border-radius: 4px;
+
+  input[type='checkbox'] {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.dropdown:hover .dropdown-list {
+  display: block;
+}
