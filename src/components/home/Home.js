@@ -61,9 +61,13 @@ const Home = ({ movies, filters }) => {
     <div className="home-container">
       <div className="filters-section">
         <span style={{ color: 'white' }}>Applied Filters:&nbsp;</span>
-        {filters.length ? (
-          filters.map((filter) => {
-            <div className="Appliedfilter">{filter}</div>; // will display all the filters
+        {filters.length > 0 ? (
+          filters.map((filter, index) => {
+            return (
+              <div className="Appliedfilter" key={`filter${index}`}>
+                {filter}
+              </div>
+            ); // will display all the filters
           })
         ) : (
           <span>No filters Applied</span>

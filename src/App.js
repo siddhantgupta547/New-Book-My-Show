@@ -63,15 +63,7 @@ function App({ data, dispatch, filters: { EventLanguage, EventGenre } }) {
   //function to consolidate all the filter values in one array to show in the applied filters section.
   const consolidatefilter = () => {
     //Has 3 cases first if both the keys have 0 filters ie no filters are applied.
-    if (EventLanguage.length <= 0 && EventGenre.length <= 0) {
-      return [];
-    } //case where both are filters are applied
-    else if (EventLanguage.length > 0 && EventGenre.length > 0) {
-      return [...EventLanguage, ...EventGenre];
-    } // case where only any one of the filters is applied
-    else {
-      return EventLanguage.length > 0 ? [...EventLanguage] : [...EventGenre];
-    }
+    return [...EventLanguage, ...EventGenre];
   };
 
   return (
